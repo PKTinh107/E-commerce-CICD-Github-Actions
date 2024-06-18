@@ -11,7 +11,7 @@ import { ROUTES_CONFIG } from "./routes";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
-    <Route path="/" element={<RoutesLayout />}>
+    <Route path="/e-commerce/" element={<RoutesLayout />}>
       {ROUTES_CONFIG.map(({ path, element }, index) => (
         <Route
           key={index}

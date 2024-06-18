@@ -70,7 +70,7 @@ export function camelCase(str) {
   const regex = /([-]|\s?&\s|'s[-&]?)/g;
   const words = str.toLowerCase().replace(regex, " ").split(" ");
   const camelCasedWords = words.map((word, index) =>
-    index !== 0 ? capitalize(word) : word
+    index !== 0 ? capitalize(word) : word,
   );
   return camelCasedWords.join("");
 }
@@ -78,7 +78,7 @@ export function camelCase(str) {
 export function updateClassOnCondition(
   input,
   condition,
-  className = "invalid"
+  className = "invalid",
 ) {
   const methodName = condition ? "remove" : "add";
   input.classList[methodName](className);

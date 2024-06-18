@@ -4,6 +4,7 @@ import postcss from "postcss/lib/postcss";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: '/e-commerce/',
   plugins: [
     react(),
     postcss({

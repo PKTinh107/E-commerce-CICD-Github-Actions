@@ -13,7 +13,7 @@ const FirstHeader = () => {
 
         <div className={s.headerContent}>
           <p className={s.discount}>
-            <span>{t("firstHeader.saleMessage")}</span>
+            <span>{t('firstHeader.saleMessage')}</span>
             <Link to="/products">{t("firstHeader.shopNow")}</Link>
           </p>
 

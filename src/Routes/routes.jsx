@@ -15,7 +15,8 @@ import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 
 export const ROUTES_CONFIG = [
-  { path: "/", element: <Home /> },
+  
+  { path: "/e-commerce/", element: <Home /> },
   { path: "/contact", element: <Contact /> },
   { path: "/about", element: <About /> },
   { path: "/details", element: <ProductDetailsPage /> },

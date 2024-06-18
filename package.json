@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tinhs.github.io/e-commercew",
+  "homepage": "https://pktinh107.github.io/e-commercew",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "update": "npm-check-updates",

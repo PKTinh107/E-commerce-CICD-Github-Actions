@@ -17,7 +17,7 @@ const AccountPage = () => {
         <title>Profile</title>
         <meta
           name="description"
-          content="Update your personal information easily on Exclusive. Manage your account details, shipping addresses, and preferences for a personalized shopping experience."
+          content="Update yours personal information easily on Exclusive. Manage your account details, shipping addresses, and preferences for a personalized shopping experience."
         />
       </Helmet>
 

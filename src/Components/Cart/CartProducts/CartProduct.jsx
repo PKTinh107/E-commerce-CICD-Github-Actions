@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput/CustomNumberInput";
 import s from "./CartProduct.module.scss";
 import RemoveCartProductBtn from "./RemoveCartProductBtn";
+import enTranslation from '../../../../public/locale/en/translation.json';
 
 const CartProduct = ({ data }) => {
   const { img, name, shortName, afterDiscount, quantity, id } = data;
@@ -15,6 +16,10 @@ const CartProduct = ({ data }) => {
     translateMethod: t,
     translateKey: "shortName",
   });
+
+  const productInfo = enTranslation.products[shortName];
+  console.log(productInfo)
+  
 
   return (
     <tr className={s.productContainer}>
@@ -47,7 +52,10 @@ export function translateProduct({
   dynamicData = {},
 }) {
   const shortNameKey = productName?.replaceAll(" ", "");
-  const productTrans = `products.${shortNameKey}`;
+  console.log(shortNameKey)
+  const productTrans = enTranslation.products[shortNameKey];
+  console.log(productTrans)
+  
   const translateText = translateMethod(
     `${productTrans}.${translateKey}`,
     dynamicData

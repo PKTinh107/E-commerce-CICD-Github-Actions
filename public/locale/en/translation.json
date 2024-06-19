@@ -185,7 +185,7 @@
     "cart": "Cart",
     "checkout": "Checkout",
     "results": "Results",
-    "404Error": "404 Error"
+    "a404Error": "404 Error"
   },
 
   "footer": {

@@ -5,6 +5,7 @@ import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSl
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./ThisMonthSection.module.scss";
 
+
 const ThisMonthSection = () => {
   const { t } = useTranslation();
   const thisMonthSection = "sectionTitles.thisMonthSection";

@@ -8,6 +8,7 @@ import { updateProductsState } from "src/Features/productsSlice";
 import { searchByObjectKey } from "src/Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./SearchProductsInput.module.scss";
+import enTranslation from '../../../../public/locale/en/translation.json';
 
 const SearchProductsInput = () => {
   const { t } = useTranslation();
@@ -90,14 +91,14 @@ const SearchProductsInput = () => {
         type="text"
         id="search-input"
         autoComplete="off"
-        placeholder={t("inputsPlaceholders.whatYouLookingFor")}
+        placeholder={enTranslation.inputsPlaceholders.whatYouLookingFor}
         onChange={(e) => handleSearchOnChange(e)}
         role="search"
         aria-label="Search product input"
         aria-required="false"
       />
 
-      <button type="submit" aria-label={t("tooltips.searchButton")}>
+      <button type="submit" aria-label={enTranslation.tooltips.searchButton}>
         <SvgIcon name="search" />
       </button>
     </form>

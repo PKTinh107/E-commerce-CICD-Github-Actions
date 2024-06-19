@@ -13,12 +13,13 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import ProductsCategory from "./ProductsCategory";
 import s from "./ProductsCategoryPage.module.scss";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const ProductsCategoryPage = () => {
   const { loadingCategoryPage } = useSelector((state) => state.global);
   const { t } = useTranslation();
   const categoryType = useGetSearchParam("type");
-  const categoryTypeTrans = t(`categoriesData.${categoryType}`);
+  const categoryTypeTrans = `enTranslation.categoriesData.${categoryType}`;
   const isWebsiteOnline = useOnlineStatus();
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingCategoryPage",

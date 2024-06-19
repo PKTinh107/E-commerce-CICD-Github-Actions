@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
 import ProductCard from "../Shared/ProductsCards/ProductCard/ProductCard";
 import s from "./ProductsCategory.module.scss";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const ProductsCategory = ({ categoryName, customization }) => {
   const { t } = useTranslation();
@@ -14,9 +15,9 @@ const ProductsCategory = ({ categoryName, customization }) => {
   if (hasNoProducts)
     return (
       <div className={s.notFoundMessage}>
-        <p>{t("common.weDontHaveProducts")}</p>
+        <p>{enTranslation.common.weDontHaveProducts}</p>
         <p>
-          {t("common.backTo")} <Link to="/">{t("common.home")}</Link>
+          {enTranslation.common.backTo} <Link to="/">{enTranslation.common.home}</Link>
         </p>
       </div>
     );

@@ -6,6 +6,7 @@ import s from "./About.module.scss";
 import AboutHeroSection from "./HeroSection/AboutHeroSection";
 import AboutInfoCards from "./InfoCards/AboutInfoCards";
 import OurMembersSection from "./OurMembersSection/OurMembersSection";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const About = () => {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ const About = () => {
 
       <main className={s.aboutPage}>
         <div className="container">
-          <PagesHistory history={["/", t("nav.about")]} />
+          <PagesHistory history={["/", enTranslation.nav.about]} />
         </div>
 
         <div className={s.container} id="about-page">

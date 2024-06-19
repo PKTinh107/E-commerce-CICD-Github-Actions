@@ -3,13 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./CategoryCard.module.scss";
+import enTranslation from '../../../../../public/locale/en/translation.json';
 
 const CategoryCard = ({ categoryData }) => {
   const { iconName, title } = categoryData;
   const categoryType = title.toLowerCase();
   const navigateTo = useNavigate();
   const { t } = useTranslation();
-  const categoryTitleTrans = t(`categoriesData.${camelCase(title)}`);
+  const categoryTitleTrans = `enTranslation.categoriesData.${camelCase(title)}`;
 
   function navigateToCategory() {
     navigateTo(`/category?type=${categoryType}`);

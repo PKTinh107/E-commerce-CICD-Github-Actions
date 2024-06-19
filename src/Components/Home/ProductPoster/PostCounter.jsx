@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import useTimerDown from "src/Hooks/App/useTimerDown";
 import s from "./PostCounter.module.scss";
+import enTranslation from '../../../../public/locale/en/translation.json';
 
 const PostCounter = () => {
   const { t } = useTranslation();
@@ -13,22 +14,22 @@ const PostCounter = () => {
     <div className={s.postCounter}>
       <div className={s.timeUnit}>
         <span>{timeData.days}</span>
-        <span>{t("common.days")}</span>
+        <span>{enTranslation.common.days}</span>
       </div>
 
       <div className={s.timeUnit}>
         <span>{timeData.hours}</span>
-        <span>{t("common.hours")}</span>
+        <span>{enTranslation.common.hours}</span>
       </div>
 
       <div className={s.timeUnit}>
         <span>{timeData.minutes}</span>
-        <span>{t("common.minutes")}</span>
+        <span>{enTranslation.common.minutes}</span>
       </div>
 
       <div className={s.timeUnit}>
         <span>{timeData.seconds}</span>
-        <span>{t("common.seconds")}</span>
+        <span>{enTranslation.common.seconds}</span>
       </div>
     </div>
   );

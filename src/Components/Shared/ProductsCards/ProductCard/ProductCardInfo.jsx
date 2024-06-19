@@ -3,6 +3,7 @@ import { translateProduct } from "../../../Cart/CartProducts/CartProduct";
 import RateStars from "../../MidComponents/RateStars/RateStars";
 import ProductColors from "../../MiniComponents/ProductColors/ProductColors";
 import s from "./ProductCardInfo.module.scss";
+import enTranslation from '../../../../../public/locale/en/translation.json';
 
 const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
   const { shortName, price, discount, afterDiscount, rate, votes, colors } =

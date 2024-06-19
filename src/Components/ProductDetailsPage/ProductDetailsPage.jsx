@@ -10,6 +10,7 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
 import RelatedItemsSection from "./RelatedItemsSection/RelatedItemsSection";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const ProductDetailsPage = () => {
   const { t } = useTranslation();
@@ -18,11 +19,11 @@ const ProductDetailsPage = () => {
     (product) => product?.name?.toLowerCase() === PRODUCT_NAME?.toLowerCase()
   );
   const productCategory = PRODUCT_DATA?.category.toLowerCase();
-  const productCategoryTrans = t(`categoriesData.${productCategory}`);
+  const productCategoryTrans = enTranslation.categoriesData[productCategory]
   const productName = PRODUCT_DATA?.shortName.replaceAll(" ", "");
-  const productNameTrans = t(`products.${productName}.name`);
+  const productNameTrans = enTranslation.products[productName].name;
   const history = [
-    t("history.account"),
+    enTranslation.history.account,
     productCategoryTrans,
     productNameTrans,
   ];

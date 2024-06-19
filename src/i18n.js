@@ -20,7 +20,7 @@ const i18nConfig = {
     caches: ["cookie"],
   },
   backend: {
-    loadPath: "/locale/en/translation.json",
+    loadPath: "/locale/{{lng}}/{{ns}}.json",
   },
 };
 

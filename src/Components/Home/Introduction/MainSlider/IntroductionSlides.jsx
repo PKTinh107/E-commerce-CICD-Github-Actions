@@ -4,6 +4,7 @@ import { introductionSliderData } from "src/Data/staticData";
 import { SwiperSlide } from "swiper/react";
 import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
 import s from "./IntroductionSlides.module.scss";
+import enTranslation from '../../../../../public/locale/en/translation.json';
 
 const IntroductionSlides = () => {
   const { t } = useTranslation();
@@ -19,10 +20,10 @@ const IntroductionSlides = () => {
               <strong>{productName}</strong>
             </div>
 
-            <h2 className={s.discount}>{t("homeSlider.title")}</h2>
+            <h2 className={s.discount}>{enTranslation.homeSlider.title}</h2>
 
             <Link to="/products" className={s.shopNow} tabIndex="-1">
-              <span>{t("buttons.buyNow")}</span>
+              <span>{enTranslation.buttons.buyNow}</span>
 
               <div className={s.arrow}>
                 <SvgIcon name="arrowRightLong" />

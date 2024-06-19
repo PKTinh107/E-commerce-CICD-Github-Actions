@@ -7,6 +7,7 @@ import { camelCase } from "src/Functions/helper";
 import useSignOut from "src/Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
+import enTranslation from '../../../../public/locale/en/translation.json';
 
 const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
@@ -18,7 +19,7 @@ const MobileNav = () => {
   return (
     <div className={`${s.mobileMenu} ${isMobileMenuActive ? s.active : ""}`}>
       <div className={s.userInfo}>
-        <Link to="/profile" title={t("mobileNav.profile")} className={s.img}>
+        <Link to="/profile" title={enTranslation.mobileNav.profile} className={s.img}>
           <img
             src={isSignIn ? userImg : userPicturePlaceholder}
             alt="user's picture"
@@ -28,10 +29,10 @@ const MobileNav = () => {
         </Link>
 
         <p>
-          {t("mobileNav.hey")} 🖐️
+          {enTranslation.mobileNav.hey} 🖐️
           <Link
             to="/profile"
-            title={t("mobileNav.profile")}
+            title={enTranslation.mobileNav.profile}
             className={s.userName}
           >
             {username}
@@ -52,7 +53,7 @@ const MobileNav = () => {
               <li key={"mobile-nav-link-" + index}>
                 <NavLink to={link} aria-current={currentPage}>
                   <SvgIcon name={icon} />
-                  <span>{t(`mobileNav.${camelCase(name)}`)}</span>
+                  <span>{`enTranslation.mobileNav.${camelCase(name)}`}</span>
                 </NavLink>
               </li>
             );
@@ -69,14 +70,14 @@ const MobileNav = () => {
           onClick={handleSignOut}
         >
           <SvgIcon name="boxArrowRight" />
-          <span>{t("mobileNav.signOut")}</span>
+          <span>{enTranslation.mobileNav.signOut}</span>
         </button>
       )}
 
       {!isSignIn && (
         <Link to="/signup" className={s.signOutButton}>
           <SvgIcon name="boxArrowRight" />
-          <span>{t("mobileNav.signIn")}</span>
+          <span>{enTranslation.cashOnDeliverymobileNav.signIn}</span>
         </Link>
       )}
     </div>

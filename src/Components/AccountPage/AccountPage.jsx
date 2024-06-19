@@ -6,6 +6,7 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import AccountMenuSection from "./AccountMenuSection/AccountMenuSection";
 import s from "./AccountPage.module.scss";
 import EditProfileForm from "./EditProfileForm/EditProfileForm";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const AccountPage = () => {
   const { loginInfo } = useSelector((state) => state.user);
@@ -27,7 +28,7 @@ const AccountPage = () => {
             <PagesHistory history={["/", t("nav.profile")]} />
 
             <p className={s.welcomeMessage}>
-              {t("common.welcome")}
+              {enTranslation.common.welcome}
               {"! "}
               <Link to="/profile">{loginInfo.username}</Link>
             </p>

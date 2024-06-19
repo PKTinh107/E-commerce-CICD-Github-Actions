@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { womenShopping } from "src/Assets/Images/Images";
 import s from "./AboutHeroSection.module.scss";
+import enTranslation from '../../../../public/locale/en/translation.json';
 
 const AboutHeroSection = () => {
   const { t } = useTranslation();
@@ -8,14 +9,14 @@ const AboutHeroSection = () => {
   return (
     <section className={s.heroSection}>
       <section className={s.content}>
-        <h2>{t("aboutPage.heroSection.heading")}</h2>
+        <h2>{enTranslation.aboutPage.heroSection.heading}</h2>
 
-        <p>{t("aboutPage.heroSection.paragraphOne")}</p>
-        <p>{t("aboutPage.heroSection.paragraphTwo")}</p>
+        <p>{enTranslation.aboutPage.heroSection.paragraphOne}</p>
+        <p>{enTranslation.aboutPage.heroSection.paragraphTwo}</p>
       </section>
 
       <div className={s.imgHolder}>
-        <img src={womenShopping} alt={t("aboutPage.heroSection.imageAlt")} />
+        <img src={womenShopping} alt={enTranslation.aboutPage.heroSection.imageAlt} />
       </div>
     </section>
   );

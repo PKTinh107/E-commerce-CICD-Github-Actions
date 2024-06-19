@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { UN_BUILT_PAGES } from "src/Data/globalVariables";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./NotFoundPage.module.scss";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const NotFoundPage = () => {
   const { t } = useTranslation();
@@ -11,14 +12,14 @@ const NotFoundPage = () => {
   const pageName = location.pathname.replace("/", "");
   const isPageNotReady = UN_BUILT_PAGES.includes(pageName);
   const tabTitleText = isPageNotReady
-    ? t("notFoundPage.notBuiltTabTitle")
-    : t("notFoundPage.tabTitle");
+    ? enTranslation.notFoundPage.notBuiltTabTitle
+    : enTranslation.notFoundPage.tabTitle;
   const descriptionText = isPageNotReady
-    ? t("notFoundPage.notBuiltDescription")
-    : t("notFoundPage.description");
-  const notFoundMessage = t("notFoundPage.tabTitle");
-  const backToHomeText = t("buttons.backToHome");
-  const historyText = t("history.404Error");
+    ? enTranslation.notFoundPage.notBuiltDescription
+    : enTranslation.notFoundPage.description;
+  const notFoundMessage = enTranslation.notFoundPage.tabTitle;
+  const backToHomeText = enTranslation.buttons.backToHome;
+  const historyText = enTranslation.history.a404Error;
 
   return (
     <>

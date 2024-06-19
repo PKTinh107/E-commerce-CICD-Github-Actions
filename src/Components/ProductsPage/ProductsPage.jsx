@@ -10,6 +10,7 @@ import ExploreProducts from "../Home/ProductPoster/ExploreProducts";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./ProductsPage.module.scss";
+import enTranslation from '../../../public/locale/en/translation.json';
 
 const ProductsPage = () => {
   const { loadingProductsPage } = useSelector((state) => state.global);
@@ -38,7 +39,7 @@ const ProductsPage = () => {
 
       <div className="container">
         <main className={s.productsPage}>
-          <PagesHistory history={["/", t("history.products")]} />
+          <PagesHistory history={["/", enTranslation.history.products]} />
 
           <section className={s.products} id="products-section">
             {!loadingProductsPage && (

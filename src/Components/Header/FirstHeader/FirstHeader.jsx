@@ -15,6 +15,7 @@ const FirstHeader = () => {
         <div className={s.headerContent}>
           <p className={s.discount}>
             <span>{enTranslation.firstHeader.saleMessage}</span>
+            <span> Khánh Tịnh </span>
             <Link to="/products">{enTranslation.firstHeader.shopNow}</Link>
           </p>
         </div>
